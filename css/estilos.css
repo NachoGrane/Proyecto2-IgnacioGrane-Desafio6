@@ -1,0 +1,98 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+
+:root {
+    --c-primary: #4d6d63;
+    --c-secondary: #d6e2de;
+    --bs-primary-focus: #4d6d63;
+    --bs-secondary-focus: #a6c1b9;
+    --bs-legend-focus: #2b3d37;
+    --bg-body: #1f2023;
+}
+body {
+    font-family: "Roboto", sans-serif;
+    background-color: var(--bg-body);
+}
+
+.d-flex {
+    display: flex !important;
+}
+.flex-row {
+    flex-direction: row !important;
+}
+.flex-column {
+    flex-direction: column !important;
+}
+.justify-content-center {
+    justify-content: center !important;
+}
+.align-items-center {
+    align-items: center !important;
+}
+.flex-wrap {
+    flex-wrap: wrap !important;
+}
+.text-center {
+    text-align: center !important;
+}
+.text-end {
+    text-align: end !important;
+}
+.text-start {
+    text-align: start !important;
+}
+.text-white {
+    color: white;
+}
+.fw-bold {
+    font-weight: bold;
+}
+.gap-3 {
+    gap: 5px;
+}
+.mt-10 {
+    margin-top: 10px !important;
+}
+.mt-20 {
+    margin-top: 20px !important;
+}
+.mb-5 {
+    margin-bottom: 5px !important;
+}
+.mb-10 {
+    margin-bottom: 10px !important;
+}
+.mb-20 {
+    margin-bottom: 20px !important;
+}
+.input-group {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.input-group > input,
+.input-group > textarea,
+.input-group > select {
+    width: 75%;
+    height: 30px;
+    font-size: 18px;
+}
+.input-group > select {
+    height: 40px;
+}
+.input-group > textarea {
+    height: 150px;
+}
+.input-group > label {
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
+.input-group > input:focus,
+.input-group > textarea:focus,
+.input-group > select:focus {
+    background-color: var(--bs-primary-focus);
+}
