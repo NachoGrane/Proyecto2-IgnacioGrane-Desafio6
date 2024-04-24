@@ -1,19 +1,85 @@
-@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Sedan:ital@0;1&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Pacifico&family=Sedan:ital@0;1&display=swap");
 
 :root {
-    --c-primary: #4d6d63;
-    --c-secondary: #d6e2de;
-    --bs-primary-focus: #4d6d63;
-    --bs-secondary-focus: #a6c1b9;
-    --bs-legend-focus: #2b3d37;
-    --bg-body: #1f2023;
+    --c-primary: #58474d;
+    --c-secondary: #f06060;
+    --bs-primary-focus: #292224;
+    --bs-secondary-focus: #b14747;
+    --bg-secondary: #f2ebbf;
+    --bg-body: #86b6aa;
 }
 body {
-    font-family: "Roboto", sans-serif;
+    font-family: "Sedan", serif;
     background-color: var(--bg-body);
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+h1 {
+    font-family: "Pacifico", cursive;
+    text-align: center;
+    font-size: 40px;
+    text-shadow: 1px 1px 2px black;
+}
+.form-group {
+    width: 50%;
+    margin-top: 30px;
+    margin-right: 20px;
+    margin-left: 20px;
+}
+fieldset {
+    background-color: var(--c-primary);
+    border-radius: 2px;
+    border-color: var(--c-primary);
+}
+legend {
+    background-color: var(--c-secondary);
+    padding: 10px;
+    border: 1px solid var(--bg-secondary);
+    font-size: 14px;
+}
+.input-group {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 16px;
+    margin-bottom: 10px;
 }
 
+.input-group > input,
+.input-group > textarea,
+.input-group > select {
+    width: 75%;
+    height: 30px;
+    font-size: 14px;
+}
+.input-group > select {
+    height: 40px;
+}
+.input-group > textarea {
+    height: 150px;
+}
+.input-group > label {
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
+.separador {
+    border-bottom: 4px dashed var(--c-secondary);
+    margin: auto;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    width: 50%;
+}
+.separador-1 {
+    display: none;
+}
+.separador-2 {
+    display: none;
+}
 .d-flex {
     display: flex !important;
 }
@@ -23,8 +89,17 @@ body {
 .flex-column {
     flex-direction: column !important;
 }
+.justify-content-start {
+    justify-content: start !important;
+}
 .justify-content-center {
     justify-content: center !important;
+}
+.justify-content-between {
+    justify-content: space-between !important;
+}
+.align-items-start {
+    align-items: start !important;
 }
 .align-items-center {
     align-items: center !important;
@@ -50,6 +125,21 @@ body {
 .gap-3 {
     gap: 5px;
 }
+.w-50 {
+    width: 50% !important;
+}
+.w-75 {
+    width: 75% !important;
+}
+.w-100 {
+    width: 100% !important;
+}
+.mr-20 {
+    margin-right: 20px !important;
+}
+.ml-20 {
+    margin-left: 20px !important;
+}
 .mt-10 {
     margin-top: 10px !important;
 }
@@ -65,34 +155,31 @@ body {
 .mb-20 {
     margin-bottom: 20px !important;
 }
-.input-group {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    font-size: 20px;
-    margin-bottom: 10px;
+.checkCondiciones > div > input[type="checkbox"] {
+    height: 15px;
+    width: 15px;
+}
+button {
+    font-family: "Pacifico", cursive;
+    padding: 15px;
+    font-size: 16px;
+    background-color: var(--c-secondary);
+    color: white;
+    border: 1px solid var(--bg-secondary);
+    margin-right: 15px;
+    margin-left: 15px;
+}
+button:hover {
+    background-color: var(--bs-secondary-focus);
 }
 
-.input-group > input,
-.input-group > textarea,
-.input-group > select {
-    width: 75%;
-    height: 30px;
-    font-size: 18px;
+@media (max-width: 1250px) {
+    .container {
+        flex-wrap: wrap;
+    }
 }
-.input-group > select {
-    height: 40px;
-}
-.input-group > textarea {
-    height: 150px;
-}
-.input-group > label {
-    margin-bottom: 10px;
-    margin-top: 10px;
-}
-.input-group > input:focus,
-.input-group > textarea:focus,
-.input-group > select:focus {
-    background-color: var(--bs-primary-focus);
+@media (min-width: 1250px) {
+    .container {
+        flex-wrap: nowrap;
+    }
 }
